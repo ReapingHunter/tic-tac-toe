@@ -37,12 +37,22 @@ export default function Board() {
     return null
   }
 
+  const areSquaresEmpty = (squares) => {
+    for(let x = 0; x < squares.length; x++){
+      if(squares[x] === null)
+        return true
+    }
+    return false
+  }
+
   const winner = calculateWinner(squares)
   let status = ""
   if(winner){
     status = "Winner: " + winner
-  } else{
+  } else if(areSquaresEmpty(squares)){
     status = "Next move: " + (xTurn ? 'X' : 'O')
+  } else {
+    status = "It's a draw!"
   }
   
   return (
