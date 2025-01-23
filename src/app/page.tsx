@@ -1,10 +1,28 @@
 'use client'
+import { Square } from "./components/Square";
 import { useState } from "react";
 
 
-export default function Home() {
+export default function Board() {
   return (
-    <div className="justify-center items-center">Status</div>
+    <div className="items-center justify-items-center">
+      <div>Status</div>
+      <div>
+        <Square value={1} onSquareClick={()=>{}}></Square>
+        <Square value={2} onSquareClick={()=>{}}></Square>
+        <Square value={3} onSquareClick={()=>{}}></Square>
+      </div>
+      <div>
+        <Square value={4} onSquareClick={()=>{}}></Square>
+        <Square value={5} onSquareClick={()=>{}}></Square>
+        <Square value={6} onSquareClick={()=>{}}></Square>
+      </div>
+      <div>
+        <Square value={7} onSquareClick={()=>{}}></Square>
+        <Square value={8} onSquareClick={()=>{}}></Square>
+        <Square value={9} onSquareClick={()=>{}}></Square>
+      </div>
+    </div>
   );
 }
 
